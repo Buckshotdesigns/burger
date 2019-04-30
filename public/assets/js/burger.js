@@ -1,4 +1,4 @@
-$("#submit-burger").on("submit", function(event){
+$("#submit-burger").on("click", function(event){
     console.log("clicked")
     event.preventDefault();
     var newBurger = {

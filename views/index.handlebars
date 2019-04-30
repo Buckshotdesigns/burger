@@ -1,0 +1,12 @@
+
+<img src="images/burger.png">
+
+<h1>Eat Da Burger</h1>
+
+<ul>
+  {{#each burger}} {{#unless this.devoured}}
+  <p>
+      {{this.id}}. {{this.burger_name}}
+  </p>
+  {{/unless}} {{/each}}
+</ul>

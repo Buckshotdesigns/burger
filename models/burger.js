@@ -6,17 +6,15 @@ var burger = {
       cb(res);
     });
   },
-  insertOne: function(cols, cb) {
-    orm.insertOne(cols, cb, function(res) {
+  insertOne: function(cols, vals, cb) {
+    orm.insertOne("burgers", cols, vals, function(res) {
       cb(res);
     });
   },
-  updateOne: function( id, cb) {
-    orm.updateOne(id, cb, function(res) {
+  updateOne: function(objColVals, condition, cb) {
+    orm.updateOne("burgers", objColVals, condition, function(res) {
       cb(res);
     });
   }
 };
-
-// Export the database functions for the controller (catsController.js).
 module.exports = burger;
